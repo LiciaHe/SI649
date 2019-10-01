@@ -1,0 +1,5 @@
+chart.json (compound chart spec):
+	https://raw.githubusercontent.com/LiciaHe/SI649/master/week5/resource/chart.json
+
+hp_mpg.json:
+	https://raw.githubusercontent.com/LiciaHe/SI649/master/week5/resource/chart.json

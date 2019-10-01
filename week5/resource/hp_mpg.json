@@ -1,0 +1,11 @@
+{
+  "config": {"view": {"width": 400, "height": 300}, "mark": {"tooltip": null}},
+  "data": {"url": "https://vega.github.io/vega-datasets/data/cars.json"},
+  "mark": {"type": "circle", "opacity": 0.5, "size": 80},
+  "encoding": {
+    "color": {"type": "nominal", "field": "Origin"},
+    "x": {"type": "quantitative", "field": "Horsepower"},
+    "y": {"type": "quantitative", "field": "Miles_per_Gallon"}
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json"
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Import Vega 5 & Vega-Lite & vega-embed (does not have to be from CDN) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+    <style>
+        label{
+            font-size:3em;
+        }
+    </style>
+</head>
+<body>
+<h1>Vega Embed Example</h1>
+
+<div id="vis"></div>
+
+<script type="text/javascript">
+    // var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
+    let jsonSpec="chart.json";
+
+    vegaEmbed('#vis', jsonSpec,{theme: 'latimes',"renderer":"svg"}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        let paths=document.getElementsByTagName("path");
+        console.log(paths);
+        for (let p of paths){
+            p.setAttribute("stroke-width",5);
+            p.setAttribute("stroke","black");
+        }
+    }).catch(console.error);
+
+</script>
+</body>
+</html>
